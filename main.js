@@ -9,10 +9,14 @@ function setup(){
 
 function draw(){
     background("#90EE90");
+    textSize[10];
+    fill("#f08a0e");
+    text('Loba', 50, 400);
+    textSize(differnece);
 }
 
 function gotPoses(results){
-    if(results.length>0){
-        console.log(results);
- } 
+leftWristX=results[0].pose.leftWrist.x;
+rightWristX=results[0].pose.rightWrist.x;
+differnece=floor(leftWristX-rightWristX);
 }
